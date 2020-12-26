@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(9, 180, 137);
+    padding: 20px;
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1 {
+    font-size: 50xp;
+    word-break: break-all;
+}
+
+.row {
+    margin: 8px -16px;
+}
+
+.column>div {
+    border-radius: 10%;
+}
+
+
+/* add padding between each column */
+
+.row,
+.row>.column {
+    padding: 8px;
+}
+
+h1,
+h3,
+p {
+    color: black;
+}
+
+h3,
+p {
+    text-align: center;
+}
+
+
+/* create four equal colunm */
+
+.column {
+    float: left;
+    width: 25%;
+}
+
+
+/* create float after row */
+
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* content */
+
+.content {
+    background-color: white;
+    padding: 8px;
+}
+
+
+/* toggle button */
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .column {
+        width: 100%;
+    }
+}
+
+
+/* toggle button */
+
+input.apple {
+    position: relative;
+    -webkit-appearance: none;
+    outline: none;
+    width: 50px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #D9DADC;
+    border-radius: 50px;
+    box-shadow: inset -20px 0 0 0 #fff;
+    transition: .2s;
+}
+
+input.apple:after {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    background: transparent;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+input.apple:checked {
+    box-shadow: inset 20px 0 0 0 #4ed164;
+    border-color: #4ed164;
+}
+
+input.apple:checked:after {
+    left: 20px;
+    box-shadow: -2px 4px 3px rgba(0, 0, 0, 0.05);
+}
+
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.btn {
+    width: 120px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 30px;
+}
+
+#toggle {
+    float: right;
+}

@@ -1,0 +1,131 @@
+$back: rgb(255, 238, 0);
+$div_back: red;
+$font_size: 20px;
+$general_padding: 5px;
+$gerneral_margin: 5px;
+$primary_color: #1f2ac9;
+$bold: bold;
+$block: inline-block;
+$list_back: black;
+$hover: white;
+
+body {
+
+    margin: 0;
+    padding: 0;
+    
+    
+}
+
+
+
+
+#show{
+    cursor: pointer;
+}
+.side_bar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    .nav_item, .ul_list{
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+       
+        .li_list{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+            padding: $general_padding;
+            transition: .5s;
+          
+            a{
+                text-decoration: none;
+                font-weight: $bold;
+                font-size: $font_size;
+                color: white;
+               
+            }
+            &:hover{
+                background-color: brown;
+                color: white;
+            }
+        }
+       
+    }
+}
+main{
+    background-color: #fc04f0;
+    transition: margin-left .5s;   
+}
+
+#section1 {
+  
+    background-color: rgb(160, 255, 8);
+    display: grid;
+    grid-template-columns: 1fr;
+     height: 100vh;
+
+    p {
+
+        font-size: $font_size;
+        font-weight: $bold;
+        color: $primary_color;
+    }
+   header{
+    grid-area: header;
+    background-color: #648ca6;
+    
+    .ul_list{
+        list-style-type: none;
+    }
+   }
+}
+
+
+#section2{
+    background-color: red ;
+    height: 100vh;
+}
+#section3{
+   background-color: gray;;
+    height: 100vh;
+}
+
+.push_button{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    padding: $general_padding;
+    border-radius: 5px;
+    color: white;;
+    background-color: black;
+    cursor: pointer;
+}
+
+// this is card 
+
+
+.box{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+@media screen and(max-width: 600px){
+    .cards{
+        display: block;
+        margin-top: 20px;
+        padding: 10px;
+    }
+  
+}
+

@@ -1,0 +1,125 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#show {
+  cursor: pointer;
+}
+
+.side_bar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.side_bar .nav_item, .side_bar .ul_list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.side_bar .nav_item .li_list, .side_bar .ul_list .li_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+  padding: 5px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.side_bar .nav_item .li_list a, .side_bar .ul_list .li_list a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+
+.side_bar .nav_item .li_list:hover, .side_bar .ul_list .li_list:hover {
+  background-color: brown;
+  color: white;
+}
+
+main {
+  background-color: #fc04f0;
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
+}
+
+#section1 {
+  background-color: #a0ff08;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  height: 100vh;
+}
+
+#section1 p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #1f2ac9;
+}
+
+#section1 header {
+  grid-area: header;
+  background-color: #648ca6;
+}
+
+#section1 header .ul_list {
+  list-style-type: none;
+}
+
+#section2 {
+  background-color: red;
+  height: 100vh;
+}
+
+#section3 {
+  background-color: gray;
+  height: 100vh;
+}
+
+.push_button {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.box {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    display: block;
+    margin-top: 20px;
+    padding: 10px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+nav header {
+    background: orange;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.140);
+    width: 100%;
+
+}
+
+nav header ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav header li {
+    display: inline-block;
+    margin: 2px;
+    padding: 8px;
+    transition: .5s;
+
+}
+
+nav header a {
+    text-decoration: none;
+    color: white;
+
+}
+
+nav header li {
+    background: #ccc;
+}
+
+.active,
+li:hover {
+    background: blue;
+}
+
+
+.show-case{
+    background: rgba(0,0,0,0.150);
+    width: 100%;
+      
+}
+.row::after{
+    content: "";
+    display: table;
+    clear:both;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.column{
+   float: left;
+    width: 23%;
+     
+}
+.card{
+   
+    background: #ccc;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+
+}
+.card h1{
+ text-align: center;
+    color: white;
+    font-weight: bold;
+        font-size: 30px;
+
+    
+}
+.card p{
+    text-align: center;
+    font-family: fantasy;
+    font-size: 20px;
+  margin: 10px;
+}
+.card .card-footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    background: white;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+}
+.pragraph{
+   display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    
+}
+.panel1{
+    margin: 5px;
+    padding: 5px;
+    background: rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */    
+}
+.panel1 p{
+  font-family: serif;
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 10px;
+}
+.max{
+    
+    display: grid;
+grid-template-rows:    minmax(100px, auto);
+grid-template-columns: minmax(auto, 50%) 250px 3em;
+     background: #ccc;
+}
+.set-max{
+    background: #555;
+    margin: 10px;
+}
+@media screen and (max-width: 700px){
+    .row{
+        width: 100%;
+        flex-direction: column;
+         margin-bottom: 20px;
+  
+    }
+    .column{
+       width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

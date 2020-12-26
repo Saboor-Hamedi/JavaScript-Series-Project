@@ -1,0 +1,15 @@
+const name = ['Book', 'Saboor', 'Book', 'Car', 'Acecrem'];
+document.write(name);
+document.write('<br>');
+let x =[...new Set(name)];
+document.write(x);
+function removeDuplicate(name) {
+  let unique = {};
+  name.forEach(function (i) {
+    if (!unique[i]) {
+      unique[i] = true;
+    }
+  });
+  return Object.keys(unique);
+}
+document.write(removeDuplicate(name));

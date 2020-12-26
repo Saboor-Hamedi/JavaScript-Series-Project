@@ -1,0 +1,28 @@
+
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: blueviolet;
+}
+
+
+main{
+    transition: margin-left .5s;
+    padding: 16px;
+    background-color: chartreuse;
+
+}
+
+.side_bar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}

@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="messge">
+        <form action="">
+            <input type="text" name="input_message" id="input_message" placeholder="Type Your message" autocomplete="off">
+            <br>
+            <button type="button" id="submite_messgebtn">Submit</button>
+        </form>
+    </div>
+    <div class="display">
+         <p id="setMessage"></p>
+    </div>
+
+   <div class="counter-content">
+    <span>
+          Counter
+      </span>
+       <div id="count">
+           
+          0
+       </div>
+        <button type="button" class="btn"id="increase">
+               Count
+           </button>
+           <button type="button" class="btn" id="decrease">
+               Low
+           </button>
+   </div>
+
+   <div id="timer">
+       
+   </div>
+   <!-- this is for counter -->
+    <div class="counter_time">
+     <div class="count"><p><span id="min">00</span> : <span id="sec">00</span></p>
+            <button id="starts">Start</button>
+            <button id="stops">Stor</button>
+            <button id="clear">Reset</button>
+     </div>
+    </div>
+
+    <nav id="AllBtns">
+        
+        <button id="btn1">Conditions</button>
+    </nav>
+    <script src="../java/app.js"></script>
+
+</body>
+
+</html>

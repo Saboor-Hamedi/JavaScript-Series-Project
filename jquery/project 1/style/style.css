@@ -1,0 +1,409 @@
+/* Global  */
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* body */
+
+body {
+	background-image: url('../image/background.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+
+
+/* header */
+
+header {
+	position: fixed;
+	top: 0;
+	background: #CD0738;
+	padding: 10px;
+	z-index: 1;
+	width: 100%;
+	display: flex;
+}
+
+
+/* section one which holds all the panels, like side bar, main panel, and news panel, 
+  this section also content the accorodion */
+
+#section_one {
+	display: flex;
+	transition: margin-left .5s;
+}
+
+
+/* this is the search input, on the top right */
+
+.input-search input {
+	width: 250px;
+	padding: 10px;
+	margin-right: 10px;
+	outline: none;
+}
+
+
+/* this is the burger button for side bard */
+
+.close-side-bar {
+	margin-top: 3px;
+	width: 30px;
+	cursor: pointer;
+}
+
+
+/* start the burger button design */
+
+.close-side-bar {
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+}
+
+.close-side-bar:after,
+.close-side-bar:before,
+.close-side-bar span {
+	background-color: #fff;
+	border-radius: 3px;
+	content: '';
+	display: block;
+	height: 6px;
+	margin: 1px 0x;
+	transition: all .2s ease-in-out;
+}
+
+.close-side-bar:hover:before {
+	transform: translateY(12px) rotate(135deg);
+}
+
+.close-side-bar:hover:after {
+	transform: translateY(-12px) rotate(-135deg);
+}
+
+.close-side-bar:hover span {
+	transform: scale(0);
+}
+
+
+/* end the burger button */
+
+
+/* this the profile button, which has a small 
+icon on the left with a dropdown panel */
+
+.logout {
+	padding: 10px;
+	cursor: pointer;
+	font-weight: bold;
+	color: white;
+	border-radius: 5px;
+	transition: .5s;
+}
+
+.logout:hover {
+	background-color: violet;
+}
+
+header div:nth-child(2) {
+	margin-left: auto;
+}
+
+
+/* end profile icon */
+
+
+/*theis is the dropdown panel*/
+
+.drop-content {
+	width: 150px;
+	display: none;
+	position: absolute;
+	background: white;
+	z-index: 1;
+}
+
+.drop-content ul {
+	list-style: none;
+	transition: .5s;
+}
+
+.drop-content li {
+	padding: 10px;
+}
+
+.drop-icon i {
+  margin: 5px;
+  float: right;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.drop-content li:hover {
+	background: blue;
+}
+
+.drop-content a {
+	font-size: 1rem;
+	text-decoration: none;
+	color: black;
+}
+
+.drop-content {
+	position: absolute;
+	margin-top: 10px;
+	top: 50px;
+	right: 2.5%;
+}
+
+
+/* this is a space bwetween header and seaction
+  i put this to have a space on between header and section
+  this helped me alot */
+
+.space {
+	height: 59px;
+}
+
+
+/* end of seaction */
+
+
+/* this the link panel, or side bar, 
+   this our side the class name is links */
+
+.links {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 0px;
+	overflow-y: auto;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.589);
+}
+
+
+/* this the main div, which holds card, accordion
+  and other staff */
+
+#main {
+	width: 100%;
+	height: 100vh;
+	overflow: auto;
+	direction: initial;
+	display: flex;
+	flex-direction: column;
+	
+}
+
+
+/* this is right div or panel, or the news part
+   */
+
+.news {
+	width: 500px;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.904);
+	color: white;
+	direction: rtl;
+	overflow-y: auto;
+}
+
+
+/* the links items */
+
+.links ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.links li  {
+	transform: translateY(70px);
+	padding: 10px;
+	margin-top: 10px;
+	background-color: tomato;
+	border-bottom: 1px solid white;
+	transition: 0.5S;
+}
+
+.links li:hover {
+	background: rgba(0, 0, 0, 0.247);
+}
+
+.links a {
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	text-decoration: none;
+}
+
+/* this hold the card  */
+
+.hold-panel {
+	background-color: rgba(77, 6, 30, 0.603);
+	margin: 10px;
+	padding: 10px;
+	display: grid;
+	grid-template-columns: repeat( auto-fit, minmax(100px, 1fr));
+}
+
+
+/* this is the card panel */
+
+.panel_card {
+	margin: 5px;
+	box-shadow: 0px 0px 14px 5px #DEE3E7;
+	color: white;
+	transition: 0.5s;
+	cursor: pointer;
+	display: grid;
+	grid-template-columns: auto;	padding: 10px;
+	background-color: rgba(221, 8, 79, 0.603);
+
+}
+
+.panel_card .card img {
+	width: 100%;
+}
+
+
+/* this for card footer, 
+  inside card we have text 
+  this div si for that */
+
+.card-footer {
+	padding: 10px;
+	width: 100%;
+}
+
+.card-header {
+	padding: 10px;
+	color: white;
+}
+
+
+/* this the image on the news panel */
+
+.profile-img img {
+	width: 100%;
+
+	cursor: pointer;
+}
+
+
+/* accordion */
+
+.panel-default {
+	margin: 10px;
+}
+
+.panel-body {
+	margin: 10px;
+	overflow-y: auto;
+	height: 300px;
+
+}
+
+.panel-title {
+	text-align: left;
+	
+}
+/* this table */
+table{
+  width: 100%;
+}
+table,
+tr,
+th,
+td {
+  padding: 10px;
+	text-align: center;
+  border: 1px solid black;
+}
+table td:nth-child(6),
+table td:nth-child(7),
+table td:nth-child(8),
+table td:nth-child(9){
+  width: 15px;
+}
+
+/* this section is only for login 
+start of by desinging input */
+.login-input input{
+ width: 300px;
+ padding: 10px;
+ border: none;
+ border-radius: 5px;
+}
+.login_button{
+	cursor: pointer;
+
+}
+.login-form-center{
+	background: rgba(20, 14, 17, 0.342);
+	margin: auto;
+	width: 400px;
+	padding: 10px;
+	border-radius: 10px;
+	transform: translateY(200px);
+}
+.login-form-center input{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	font-size: 18px;
+
+}
+.login-footer {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	background: black;
+	display: block;
+	text-align: center;
+	padding: 10px;
+	
+}
+.login-footer h1{
+	color: white;
+}
+@media screen and (max-width: 900px) {
+	#section_one {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.space {
+		margin-bottom: 8%;
+	}
+	#main {
+		width: 100%;
+	}
+	.news {
+		margin-top: 10px;
+		width: 100%;
+	}
+	.panel_card {
+		width: 100%;
+	}
+	.hold-panel {
+		grid-template-columns: 1fr;
+	}
+	.drop-content {
+		margin-right: 12px;
+		right: 2%;
+	}
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+
+    <nav class="nav" id="nav">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">example</a></li>
+        </ul>
+       
+    </nav>
+    <div class="flip_hex">
+        <div class="flip" id="flip">Color fliper </div>
+    <div class="hex" id="hex">Color hex </div>
+    </div>
+  <main>
+    
+    <div class="divcolor">        
+        <button id="btn">click me</button>
+        <h2>Your Background : <span class="color"> </span> </h2> 
+     </div>   
+    
+     <div class="divcounter">
+    <div class="count-number">Count: </div>
+     <h1>  <span id="value">0</span></h1>
+    <div class="coutner" id="counter">
+        <button class="btn btn-increase">count</button>
+        <button class="btn btn-reset">reset</button>
+        <button class="btn btn-decrease">descrease</button>
+    </div>
+    </div>
+     <!-- this is review image -->
+     <section class="image-container-review">
+         <!-- title -->
+         
+         <!-- review -->
+         <article class="review">
+           
+             <div class="image-container">
+                 <img src="./images/1.png" id="person-image" width="150px"
+                 height="150px">
+                 
+             </div>
+             <div class="title"><h2>Review</h2></div>
+             <h2 id="author">The author</h2>
+             <p id="job">Designer</p>
+             <p id="infor">
+                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel velit, hic amet quam accusamus commodi dicta beatae ipsa soluta? Maxime.
+             </p>
+            <div class="prev-next">
+                <div class="prev" id="prev">previous</div>
+                <div class="next" id="next">next</div>
+            </div>
+             <button class="random-bnt">click</button>
+         </article>
+     </section>
+
+     <section class="random-sentence" id="random-sentence">
+         <div><h1>Sentence || Words</h1></div>
+         <button class="refresh-word" id="refresh-word" onclick="sentence()">Refresh</button>
+         <div class="words" id="words">
+            <p id="sentence"></p>
+         </div>
+     </section>
+
+
+     <!-- lorem -->
+     <h1 class="title">Lorem Ipsum Generator</h1>
+
+     <p class="description">A simple lorem ipsum generator</p>
+ 
+     <form action="" method="POST">
+       <input type="number" class="paragraph-number" name="numberOfParagraphs">
+       <input type="submit" value="Generate" class="generate-button">
+     </form>
+ 
+     <div class="generated-text">
+       <div class='placeholder-div'></div>
+     </div>
+  </main>
+
+    <script src="hex.js"></script>
+</body>
+</html>

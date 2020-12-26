@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #222;
+}
+
+.container {
+
+    border: 5px solid #eee;
+    display: flex;
+
+}
+
+.container>div {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.container>div:nth-child(1) {
+    background: #84b0f8;
+}
+
+.container>div:nth-child(2) {
+    background-color: yellow;
+}
+
+.container>div:nth-child(3) {
+    background: red;
+}
+
+.content {
+    display: flex;
+
+}
+
+.content>div {
+    padding: 10px;
+}
+
+.content>div:nth-child(1) {
+    background: yellow;
+}
+
+.content>div:nth-child(2) {
+    background: blue;
+}
+
+.content>div:nth-child(3) {
+    background: orange;
+}
+
+.pane3 {
+    margin-left: auto;
+}
+
+.flex-pro {
+    display: flex;
+}
+
+.flex-pro>div {
+    padding: 10px;
+}
+
+.flex-pro>div:nth-child(1) {
+    background: red;
+    flex: 1;
+}
+
+.flex-pro>div:nth-child(2) {
+    background: gray;
+    flex: 1;
+    text-align: center;
+}
+
+flex-pro>div:nth-child(3) {
+    background: gray;
+    flex: 1;
+    text-align: center;
+}
+
+.column {
+    display: flex;
+    background: yellowgreen;
+}
+
+.column>div {
+    padding: 10px;
+
+}
+
+.column>div:nth-child(3) {
+    background: black;
+    color: white;
+    transition-property: background;
+    transition: .5s;
+    transition-timing-function: linear;
+    transform: rotate(0deg);
+}
+
+.column>div:hover:nth-child(3) {
+    background: blue;
+    cursor: pointer;
+    transition: .5s;
+    transform: rotate(360deg);
+}
+
+.display-flex-box {
+    display: flex;
+
+}
+
+.display-flex-box>div {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    background: black;
+    opacity: 0.5;
+    box-shadow: 0 0px -8px 0 rgba(0, 0, 0, 0.2), 0 0px 0px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:600px) {
+    .display-flex-box {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .display-flex-box>div {
+        width: 95%;
+        height: 300px;
+    }
+}
+
+.display-flex-box>div {
+    animation: glowing 1s infinite alternate;
+}
+
+@keyframes glowing {
+    from {
+        box-shadow: 0 0 5px -10px #111;
+    }
+
+    to {
+        box-shadow: 0 0 5px 5px #111;
+    }
+}
+
+.line {
+    max-width: 100%;
+    border-top: 10px dashed red;
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
